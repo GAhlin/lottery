@@ -1,18 +1,19 @@
 package com.gxl.lottery.domain.strategy.repository;
 
 import com.gxl.lottery.domain.strategy.model.aggregates.StrategyRich;
-import com.gxl.lottery.infrastructure.po.Award;
+import com.gxl.lottery.domain.strategy.model.vo.AwardBriefVO;
 
 import java.util.List;
 
 /**
  * 策略表仓储服务
+ * @author guo
  */
 public interface IStrategyRepository {
 
     StrategyRich queryStrategyRich(Long strategyId);
 
-    Award queryAwardInfo(String awardId);
+    AwardBriefVO queryAwardInfo(String awardId);
 
     List<String> queryNoStockStrategyAwardList(Long strategyId);
 

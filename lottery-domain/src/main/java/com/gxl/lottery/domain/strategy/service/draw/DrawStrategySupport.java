@@ -1,6 +1,7 @@
 package com.gxl.lottery.domain.strategy.service.draw;
 
 import com.gxl.lottery.domain.strategy.model.aggregates.StrategyRich;
+import com.gxl.lottery.domain.strategy.model.vo.AwardBriefVO;
 import com.gxl.lottery.domain.strategy.repository.IStrategyRepository;
 import com.gxl.lottery.infrastructure.po.Award;
 
@@ -30,7 +31,7 @@ public class DrawStrategySupport extends DrawConfig{
      * @param awardId 奖品ID
      * @return 中奖详情
      */
-    protected Award queryAwardInfoByAwardId(String awardId){
+    protected AwardBriefVO queryAwardInfoByAwardId(String awardId){
         return strategyRepository.queryAwardInfo(awardId);
     }
 
