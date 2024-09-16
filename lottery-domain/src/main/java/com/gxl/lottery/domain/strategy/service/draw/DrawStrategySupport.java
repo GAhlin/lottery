@@ -3,7 +3,6 @@ package com.gxl.lottery.domain.strategy.service.draw;
 import com.gxl.lottery.domain.strategy.model.aggregates.StrategyRich;
 import com.gxl.lottery.domain.strategy.model.vo.AwardBriefVO;
 import com.gxl.lottery.domain.strategy.repository.IStrategyRepository;
-import com.gxl.lottery.infrastructure.po.Award;
 
 import javax.annotation.Resource;
 

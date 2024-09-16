@@ -7,9 +7,6 @@ import com.gxl.lottery.domain.strategy.model.req.DrawReq;
 import com.gxl.lottery.domain.strategy.model.res.DrawResult;
 import com.gxl.lottery.domain.strategy.model.vo.*;
 import com.gxl.lottery.domain.strategy.service.algorithm.IDrawAlgorithm;
-import com.gxl.lottery.infrastructure.po.Award;
-import com.gxl.lottery.infrastructure.po.Strategy;
-import com.gxl.lottery.infrastructure.po.StrategyDetail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

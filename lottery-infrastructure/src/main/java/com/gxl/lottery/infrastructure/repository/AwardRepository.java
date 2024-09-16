@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * @description: 奖品表仓储服务
  * @author: gxl
  */
-@Component
+//@Component
 public class AwardRepository implements IAwardRepository {
 
 }

@@ -1,5 +1,9 @@
 package com.gxl.lottery.domain.activity.model.aggregates;
 
+import com.gxl.lottery.domain.activity.model.vo.ActivityVO;
+import com.gxl.lottery.domain.activity.model.vo.AwardVO;
+import com.gxl.lottery.domain.activity.model.vo.StrategyVO;
+
 import java.util.List;
 
 /**
