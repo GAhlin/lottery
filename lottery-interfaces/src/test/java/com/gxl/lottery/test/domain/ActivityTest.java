@@ -1,4 +1,4 @@
-package com.gxl.lottery.test;
+package com.gxl.lottery.test.domain;
 
 import com.gxl.lottery.common.Constants;
 import com.gxl.lottery.domain.activity.model.aggregates.ActivityConfigRich;

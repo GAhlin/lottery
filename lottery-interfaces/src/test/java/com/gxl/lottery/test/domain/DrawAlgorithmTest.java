@@ -1,4 +1,4 @@
-package com.gxl.lottery.test;
+package com.gxl.lottery.test.domain;
 
 import com.gxl.lottery.domain.strategy.model.vo.AwardRateInfo;
 import com.gxl.lottery.domain.strategy.service.algorithm.IDrawAlgorithm;
