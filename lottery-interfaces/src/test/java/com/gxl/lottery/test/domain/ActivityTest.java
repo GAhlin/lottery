@@ -3,11 +3,14 @@ package com.gxl.lottery.test.domain;
 import com.gxl.lottery.common.Constants;
 import com.gxl.lottery.domain.activity.model.aggregates.ActivityConfigRich;
 import com.gxl.lottery.domain.activity.model.req.ActivityConfigReq;
+import com.gxl.lottery.domain.activity.model.req.PartakeReq;
+import com.gxl.lottery.domain.activity.model.res.PartakeResult;
 import com.gxl.lottery.domain.activity.model.vo.ActivityVO;
 import com.gxl.lottery.domain.activity.model.vo.AwardVO;
 import com.gxl.lottery.domain.activity.model.vo.StrategyDetailVO;
 import com.gxl.lottery.domain.activity.model.vo.StrategyVO;
 import com.gxl.lottery.domain.activity.service.deploy.IActivityDeploy;
+import com.gxl.lottery.domain.activity.service.partake.IActivityPartake;
 import com.gxl.lottery.domain.activity.service.stateflow.IStateHandler;
 import com.alibaba.fastjson.JSON;
 import org.junit.Before;
@@ -39,6 +42,9 @@ public class ActivityTest {
 
     @Resource
     private IStateHandler stateHandler;
+
+    @Resource
+    private IActivityPartake activityPartake;
 
     private ActivityConfigRich activityConfigRich;
 
@@ -169,6 +175,14 @@ public class ActivityTest {
         logger.info("审核通过，测试：{}", JSON.toJSONString(stateHandler.checkPass(100001L, Constants.ActivityState.ARRAIGNMENT)));
         logger.info("运行活动，测试：{}", JSON.toJSONString(stateHandler.doing(100001L, Constants.ActivityState.PASS)));
         logger.info("二次提审，测试：{}", JSON.toJSONString(stateHandler.checkPass(100001L, Constants.ActivityState.EDIT)));
+    }
+
+    @Test
+    public void test_activityPartake() {
+        PartakeReq req = new PartakeReq("Uhdgkw766120d", 100001L);
+        PartakeResult res = activityPartake.doPartake(req);
+        logger.info("请求参数：{}", JSON.toJSONString(req));
+        logger.info("测试结果：{}", JSON.toJSONString(res));
     }
 
 }

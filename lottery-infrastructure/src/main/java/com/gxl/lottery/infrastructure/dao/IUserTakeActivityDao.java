@@ -1,6 +1,5 @@
 package com.gxl.lottery.infrastructure.dao;
 
-import com.gxl.middleware.db.router.annotation.DBRouter;
 import com.gxl.lottery.infrastructure.po.UserTakeActivity;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -16,7 +15,6 @@ public interface IUserTakeActivityDao {
      *
      * @param userTakeActivity 入参
      */
-    @DBRouter(key = "uId")
     void insert(UserTakeActivity userTakeActivity);
 
 }
