@@ -35,17 +35,17 @@ public interface IDrawAlgorithm {
 
     /**
      * 判断是否已经，做了数据初始化
-     * @param strategyId
-     * @return
+     * @param strategyId    策略ID
+     * @return              判断结果
      */
     boolean isExistRateTuple(Long strategyId);
 
     /**
      * SecureRandom 生成随机数，索引到对应的奖品信息返回结果
      *
-     * @param strategyId 策略ID
-     * @param excludeAwardIds 排除掉已经不能作为抽奖的奖品ID，留给风控和空库存使用
-     * @return 中奖结果
+     * @param strategyId        策略ID
+     * @param excludeAwardIds   排除掉已经不能作为抽奖的奖品ID，留给风控和空库存使用
+     * @return                  中奖结果
      */
     String randomDraw(Long strategyId, List<String> excludeAwardIds);
 

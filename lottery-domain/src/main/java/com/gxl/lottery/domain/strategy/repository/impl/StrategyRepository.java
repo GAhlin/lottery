@@ -14,6 +14,9 @@ import javax.annotation.Resource;
 import java.util.List;
 
 
+/**
+ * 策略表仓储服务
+ */
 @Component
 public class StrategyRepository implements IStrategyRepository {
 
@@ -36,6 +39,20 @@ public class StrategyRepository implements IStrategyRepository {
     @Override
     public Award queryAwardInfo(String awardId) {
         return awardDao.queryAwardInfo(awardId);
+    }
+
+    @Override
+    public List<String> queryNoStockStrategyAwardList(Long strategyId) {
+        return strategyDetailDao.queryNoStockStrategyAwardList(strategyId);
+    }
+
+    @Override
+    public boolean deductStock(Long strategyId, String awardId) {
+        StrategyDetail req = new StrategyDetail();
+        req.setStrategyId(strategyId);
+        req.setAwardId(awardId);
+        int count = strategyDetailDao.deductStock(req);
+        return count == 1;
     }
 
 }
