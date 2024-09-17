@@ -10,7 +10,7 @@ import com.gxl.lottery.infrastructure.dao.IUserTakeActivityDao;
 import com.gxl.lottery.infrastructure.po.UserStrategyExport;
 import com.gxl.lottery.infrastructure.po.UserTakeActivity;
 import com.gxl.lottery.infrastructure.po.UserTakeActivityCount;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -19,7 +19,7 @@ import java.util.Date;
  * @description: 用户参与活动仓储
  * @author: gxl
  */
-@Component
+@Repository
 public class UserTakeActivityRepository implements IUserTakeActivityRepository {
 
     @Resource

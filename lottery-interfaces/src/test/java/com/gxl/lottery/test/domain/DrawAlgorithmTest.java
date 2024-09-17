@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.gxl.lottery.common.Constants;
 import com.gxl.lottery.domain.strategy.model.req.DrawReq;
 import com.gxl.lottery.domain.strategy.model.res.DrawResult;
-import com.gxl.lottery.domain.strategy.model.vo.AwardRateInfo;
+import com.gxl.lottery.domain.strategy.model.vo.AwardRateVO;
 import com.gxl.lottery.domain.strategy.service.algorithm.IDrawAlgorithm;
 import com.gxl.lottery.domain.strategy.service.draw.IDrawExec;
 import com.gxl.lottery.test.SpringRunnerTest;
@@ -40,12 +40,12 @@ public class DrawAlgorithmTest {
     @Before
     public void init() {
         // 奖品信息
-        List<AwardRateInfo> strategyList = new ArrayList<>();
-        strategyList.add(new AwardRateInfo("一等奖：IMac", new BigDecimal("0.05")));
-        strategyList.add(new AwardRateInfo("二等奖：iphone", new BigDecimal("0.15")));
-        strategyList.add(new AwardRateInfo("三等奖：ipad", new BigDecimal("0.20")));
-        strategyList.add(new AwardRateInfo("四等奖：AirPods", new BigDecimal("0.25")));
-        strategyList.add(new AwardRateInfo("五等奖：充电宝", new BigDecimal("0.35")));
+        List<AwardRateVO> strategyList = new ArrayList<>();
+        strategyList.add(new AwardRateVO("一等奖：IMac", new BigDecimal("0.05")));
+        strategyList.add(new AwardRateVO("二等奖：iphone", new BigDecimal("0.15")));
+        strategyList.add(new AwardRateVO("三等奖：ipad", new BigDecimal("0.20")));
+        strategyList.add(new AwardRateVO("四等奖：AirPods", new BigDecimal("0.25")));
+        strategyList.add(new AwardRateVO("五等奖：充电宝", new BigDecimal("0.35")));
 
         // 初始数据
         randomDrawAlgorithm.initRateTuple(100001L, Constants.StrategyMode.SINGLE.getCode(), strategyList);

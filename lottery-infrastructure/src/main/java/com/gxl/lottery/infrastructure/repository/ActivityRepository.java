@@ -7,7 +7,7 @@ import com.gxl.lottery.domain.activity.repository.IActivityRepository;
 import com.gxl.lottery.infrastructure.dao.*;
 import com.gxl.lottery.infrastructure.po.*;
 import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.List;
  * @description:
  * @author: gxl
  */
-@Component
+@Repository
 public class ActivityRepository implements IActivityRepository {
 
     @Resource

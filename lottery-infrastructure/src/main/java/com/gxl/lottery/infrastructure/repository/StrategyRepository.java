@@ -12,7 +12,7 @@ import com.gxl.lottery.infrastructure.po.Award;
 import com.gxl.lottery.infrastructure.po.Strategy;
 import com.gxl.lottery.infrastructure.po.StrategyDetail;
 import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import java.util.List;
  * @description: 策略表仓储服务
  * @author：gxl
  */
-@Component
+@Repository
 public class StrategyRepository implements IStrategyRepository {
 
     @Resource

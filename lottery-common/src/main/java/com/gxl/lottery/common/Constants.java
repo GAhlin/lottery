@@ -14,7 +14,6 @@ public class Constants {
         NO_UPDATE("0004", "SQL操作无更新"),
         LOSING_DRAW("D001", "未中奖");
 
-
         private String code;
         private String info;
 
@@ -31,6 +30,42 @@ public class Constants {
             return info;
         }
 
+    }
+
+    /**
+     * 全局属性
+     */
+    public static final class Global {
+        /** 空节点值 */
+        public static final Long TREE_NULL_NODE = 0L;
+    }
+
+    /**
+     * 决策树节点
+     */
+    public static final class NodeType{
+        /** 树茎 */
+        public static final Integer STEM = 1;
+        /** 果实 */
+        public static final Integer FRUIT = 2;
+    }
+
+    /**
+     * 规则限定类型
+     */
+    public static final class RuleLimitType {
+        /** 等于 */
+        public static final int EQUAL = 1;
+        /** 大于 */
+        public static final int GT = 2;
+        /** 小于 */
+        public static final int LT = 3;
+        /** 大于&等于 */
+        public static final int GE = 4;
+        /** 小于&等于 */
+        public static final int LE = 5;
+        /** 枚举 */
+        public static final int ENUM = 6;
     }
 
     /**
@@ -70,6 +105,7 @@ public class Constants {
          * 8：开启
          */
         OPEN(8, "开启");
+
         private Integer code;
         private String info;
 
@@ -145,7 +181,7 @@ public class Constants {
         /**
          * 未中奖
          */
-        FAIL(0,"未中奖"),
+        FAIL(0, "未中奖"),
 
         /**
          * 已中奖
@@ -155,7 +191,7 @@ public class Constants {
         /**
          * 兜底奖
          */
-        Cover(2,"兜底奖");
+        Cover(2, "兜底奖");
 
         private Integer code;
         private String info;
@@ -357,6 +393,5 @@ public class Constants {
             this.info = info;
         }
     }
-
 
 }

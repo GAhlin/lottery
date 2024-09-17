@@ -1,12 +1,11 @@
 package com.gxl.lottery.domain.strategy.service.algorithm.impl;
 
-import com.gxl.lottery.domain.strategy.model.vo.AwardRateInfo;
+import com.gxl.lottery.domain.strategy.model.vo.AwardRateVO;
 import com.gxl.lottery.domain.strategy.service.algorithm.BaseAlgorithm;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.security.SecureRandom;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,7 +22,7 @@ public class WbDrawAlgorithm extends BaseAlgorithm {
         BigDecimal differenceDenominator = BigDecimal.ZERO;
 
         // 排除掉不在抽奖范围的奖品ID集合
-        List<AwardRateInfo> awardRateIntervalValList = awardRateInfoMap.get(strategyId);
+        List<AwardRateVO> awardRateIntervalValList = awardRateInfoMap.get(strategyId);
 
         // 获取随机概率值
         SecureRandom secureRandom = new SecureRandom();
@@ -32,7 +31,7 @@ public class WbDrawAlgorithm extends BaseAlgorithm {
         // 循环获取奖品
         String awardId = "";
         int sum = 0;
-        for (AwardRateInfo awardRateInfo : awardRateIntervalValList) {
+        for (AwardRateVO awardRateInfo : awardRateIntervalValList) {
             sum += awardRateInfo.getAwardRate().multiply(new BigDecimal(100)).intValue();
             if (randomVal <= sum) {
                 awardId = awardRateInfo.getAwardId();
