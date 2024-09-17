@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * @description: 活动领取模板抽象类
- * @author: 小gxl
+ * @author: gxl
  */
 public abstract class BaseActivityPartake extends ActivityPartakeSupport implements IActivityPartake {
 

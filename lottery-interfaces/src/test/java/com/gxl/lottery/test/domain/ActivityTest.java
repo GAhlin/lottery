@@ -64,6 +64,7 @@ public class ActivityTest {
         activity.setEndDateTime(new Date());
         activity.setStockCount(100);
         activity.setTakeCount(10);
+        activity.setStrategyId(10001L);
         activity.setState(Constants.ActivityState.EDIT.getCode());
         activity.setCreator("xiaofuge");
 
@@ -128,31 +129,31 @@ public class ActivityTest {
         award_01.setAwardId("101");
         award_01.setAwardType(Constants.AwardType.DESC.getCode());
         award_01.setAwardName("电脑");
-        award_01.setAwardContent("请联系活动组织者 gxl");
+        award_01.setAwardContent("请联系活动组织者 fustack");
 
         AwardVO award_02 = new AwardVO();
         award_02.setAwardId("102");
         award_02.setAwardType(Constants.AwardType.DESC.getCode());
         award_02.setAwardName("手机");
-        award_02.setAwardContent("请联系活动组织者 gxl");
+        award_02.setAwardContent("请联系活动组织者 fustack");
 
         AwardVO award_03 = new AwardVO();
         award_03.setAwardId("103");
         award_03.setAwardType(Constants.AwardType.DESC.getCode());
         award_03.setAwardName("平板");
-        award_03.setAwardContent("请联系活动组织者 gxl");
+        award_03.setAwardContent("请联系活动组织者 fustack");
 
         AwardVO award_04 = new AwardVO();
         award_04.setAwardId("104");
         award_04.setAwardType(Constants.AwardType.DESC.getCode());
         award_04.setAwardName("耳机");
-        award_04.setAwardContent("请联系活动组织者 gxl");
+        award_04.setAwardContent("请联系活动组织者 fustack");
 
         AwardVO award_05 = new AwardVO();
         award_05.setAwardId("105");
         award_05.setAwardType(Constants.AwardType.DESC.getCode());
         award_05.setAwardName("数据线");
-        award_05.setAwardContent("请联系活动组织者 gxl");
+        award_05.setAwardContent("请联系活动组织者 fustack");
 
         List<AwardVO> awardList = new ArrayList<>();
         awardList.add(award_01);
