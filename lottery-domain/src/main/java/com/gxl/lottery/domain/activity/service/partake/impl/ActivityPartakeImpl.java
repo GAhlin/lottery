@@ -1,6 +1,6 @@
 package com.gxl.lottery.domain.activity.service.partake.impl;
 
-import cn.bugstack.middleware.db.router.strategy.IDBRouterStrategy;
+import com.gxl.middleware.db.router.strategy.IDBRouterStrategy;
 import com.gxl.lottery.common.Constants;
 import com.gxl.lottery.common.Result;
 import com.gxl.lottery.domain.activity.model.req.PartakeReq;
