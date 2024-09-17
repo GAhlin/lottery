@@ -1,6 +1,7 @@
 package com.gxl.lottery.domain.activity.service.partake.impl;
 
 import com.gxl.lottery.domain.activity.model.vo.DrawOrderVO;
+import com.gxl.lottery.domain.activity.model.vo.InvoiceVO;
 import com.gxl.lottery.domain.activity.model.vo.UserTakeActivityVO;
 import com.gxl.middleware.db.router.strategy.IDBRouterStrategy;
 import com.gxl.lottery.common.Constants;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -143,4 +145,17 @@ public class ActivityPartakeImpl extends BaseActivityPartake {
         userTakeActivityRepository.updateInvoiceMqState(uId, orderId, mqState);
     }
 
+    @Override
+    public List<InvoiceVO> scanInvoiceMqState(int dbCount, int tbCount) {
+        try {
+            // 设置路由
+            dbRouter.setDBKey(dbCount);
+            dbRouter.setTBKey(tbCount);
+
+            // 查询数据
+            return userTakeActivityRepository.scanInvoiceMqState();
+        } finally {
+            dbRouter.clear();
+        }
+    }
 }
