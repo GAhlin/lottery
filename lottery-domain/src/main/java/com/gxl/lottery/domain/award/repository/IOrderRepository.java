@@ -5,7 +5,7 @@ package com.gxl.lottery.domain.award.repository;
  * @Date 2024/9/16
  * 奖品表仓储服务接口
  */
-public interface IAwardRepository {
+public interface IOrderRepository {
 
     // TODO 对分库分表中的用户中奖纪录操作
 }
