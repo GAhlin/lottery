@@ -19,17 +19,17 @@ mini-db-router:
       list: db01,db02
       db00:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://106.53.133.56:13422/lottery?useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://106.53.133.56:13422/lottery?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
         username: gxl
         password: gxl+1234
       db01:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://106.53.133.56:13422/lottery_01?useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://106.53.133.56:13422/lottery_01?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
         username: gxl
         password: gxl+1234
       db02:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://106.53.133.56:13422/lottery_02?useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://106.53.133.56:13422/lottery_02?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
         username: gxl
         password: gxl+1234
 
