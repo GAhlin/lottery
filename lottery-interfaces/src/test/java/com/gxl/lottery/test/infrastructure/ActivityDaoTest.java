@@ -1,4 +1,4 @@
-package com.gxl.lottery.test.dao;
+package com.gxl.lottery.test.infrastructure;
 
 import com.gxl.lottery.infrastructure.dao.IActivityDao;
 import com.gxl.lottery.infrastructure.po.Activity;

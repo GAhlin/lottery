@@ -1,11 +1,16 @@
 package com.gxl.lottery.application.worker;
 
+import com.gxl.lottery.application.mq.producer.KafkaProducer;
 import com.gxl.lottery.common.Constants;
 import com.gxl.lottery.common.Result;
 import com.gxl.lottery.domain.activity.model.vo.ActivityVO;
+import com.gxl.lottery.domain.activity.model.vo.InvoiceVO;
 import com.gxl.lottery.domain.activity.service.deploy.IActivityDeploy;
+import com.gxl.lottery.domain.activity.service.partake.IActivityPartake;
 import com.gxl.lottery.domain.activity.service.stateflow.IStateHandler;
 import com.alibaba.fastjson.JSON;
+import com.gxl.middleware.db.router.strategy.IDBRouterStrategy;
+import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

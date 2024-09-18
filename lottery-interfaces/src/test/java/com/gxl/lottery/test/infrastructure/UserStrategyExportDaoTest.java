@@ -1,4 +1,4 @@
-package com.gxl.lottery.test.dao;
+package com.gxl.lottery.test.infrastructure;
 
 import com.gxl.lottery.common.Constants;
 import com.gxl.lottery.domain.support.ids.IIdGenerator;
