@@ -129,7 +129,7 @@ public class ActivityRepository implements IActivityRepository {
         List<ActivityVO> activityVOList = new ArrayList<>(activityList.size());
         for (Activity activity : activityList) {
             ActivityVO activityVO = new ActivityVO();
-            activityVO.setActivityId(activity.getId());
+            activityVO.setId(activity.getId());
             activityVO.setActivityId(activity.getActivityId());
             activityVO.setActivityName(activity.getActivityName());
             activityVO.setBeginDateTime(activity.getBeginDateTime());
